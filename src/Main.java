@@ -1,9 +1,10 @@
-import apicalc.ApiCalc;
+import _4Api_._4Api_;
 
-public class Main extends ApiCalc {
+public class Main extends _4Api_ {
     public static void main(String[] args) {
         double a = add(2, 2);
         double b = valuesconveritor("Euro", "Yen", 0.62);
-        System.out.println(b);
+        println(String.valueOf(a));
     }
+
 }

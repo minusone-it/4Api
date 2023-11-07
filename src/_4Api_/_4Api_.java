@@ -1,6 +1,6 @@
-package apicalc;
+package _4Api_;
 
-public class ApiCalc {
+public class _4Api_ {
 
     static double result;
 
@@ -51,12 +51,14 @@ public class ApiCalc {
         return num1*num2;
     }
 
+
     public static double valuesconveritor(String misure1, String misure2, double value) {
         switch(misure1) {
             case "Euro":
                 switch(misure2) {
                     case "Yen":
                         result = mult(value, 159);
+                        break;
                 }
             case "Yen":
                 switch(misure2) {
@@ -67,4 +69,9 @@ public class ApiCalc {
 
         return result;
     }
+
+    public static void println(String text) {
+        System.out.println(text);
+    }
+
 }
