@@ -1,5 +1,7 @@
 package _4Api_;
 
+import java.util.Scanner;
+
 public class _4Api_ {
 
     static double result;
@@ -63,7 +65,7 @@ public class _4Api_ {
             case "Yen":
                 switch(misure2) {
                     case "Euro":
-                        result = mult(value, 159);
+                        result = mult(value, 0.0062893081761006) + 0.0000000000000047;
                 }
         }
 
@@ -72,6 +74,69 @@ public class _4Api_ {
 
     public static void println(String text) {
         System.out.println(text);
+    }
+
+    public static void println() {
+        System.out.println();
+    }
+
+    static boolean resultcorrect;
+    public static boolean opChecker(String operationType, int num1, int num2, int result) {
+        int resulta;
+        if (operationType.equalsIgnoreCase("Add") || operationType.equalsIgnoreCase("Addiction")) {
+            resulta = num1 + num2;
+            resultcorrect = resulta == result;
+        } else if (operationType.equalsIgnoreCase("Sub") || operationType.equalsIgnoreCase("Subtraction")) {
+            resulta = num1 - num2;
+            resultcorrect = resulta == result;
+        } else if (operationType.equalsIgnoreCase("Div") || operationType.equalsIgnoreCase("Divison")) {
+            resulta = num1 / num2;
+            resultcorrect = resulta == result;
+        } else if (operationType.equalsIgnoreCase("Mult") || operationType.equalsIgnoreCase("Multiplication")) {
+            resulta = num1 * num2;
+            resultcorrect = resulta == result;
+        }
+        return resultcorrect;
+    }
+
+    public static boolean opChecker(int operationType, int num1, int num2, int result) {
+        int resulta;
+        if (operationType == 1) {
+            resulta = num1 + num2;
+            resultcorrect = resulta == result;
+        } else if (operationType == 2) {
+            resulta = num1 - num2;
+            resultcorrect = resulta == result;
+        } else if (operationType == 3) {
+            resulta = num1 / num2;
+            resultcorrect = resulta == result;
+        } else if (operationType == 4) {
+            resulta = num1 * num2;
+            resultcorrect = resulta == result;
+        }
+        return resultcorrect;
+    }
+
+    static Scanner s = new Scanner(System.in);
+
+    public static String readNextLine() {
+        return s.nextLine();
+    }
+
+    public static int readNextInt() {
+        return s.nextInt();
+    }
+
+    public static short readNextShort() {
+        return s.nextShort();
+    }
+
+    public static double readNextDouble() {
+        return s.nextDouble();
+    }
+
+    public static float readNextFloat() {
+        return s.nextFloat();
     }
 
 }
