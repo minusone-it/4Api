@@ -53,6 +53,22 @@ public class _4Api_ {
         return num1*num2;
     }
 
+    public static long div(long num1, long num2) {
+        return num1/num2;
+    }
+
+    public static int div(int num1, int num2) {
+        return num1/num2;
+    }
+
+    public static float div(float num1, float num2) {
+        return num1/num2;
+    }
+
+    public static double div(double num1, double num2) {
+        return num1/num2;
+    }
+
 
     public static double valuesconveritor(String misure1, String misure2, double value) {
         switch(misure1) {
@@ -137,6 +153,10 @@ public class _4Api_ {
 
     public static float readNextFloat() {
         return s.nextFloat();
+    }
+
+    public static String readNext() {
+        return s.next();
     }
 
 }
